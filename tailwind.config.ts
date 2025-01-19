@@ -10,8 +10,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: 'var(--background)',
-        foreground: 'var(--foreground)',
+        "background": '#1E1E1E',
       },
       fontFamily: {
         poppins: ['var(--font-poppins)', 'sans-serif'],
@@ -27,13 +26,27 @@ export default {
       },
       animation: {
         fadeIn: 'fadeIn 1s ease-in-out',
+        slideDown: 'slideDown 0.6s ease-out',
+        slideUp: 'slideUp 0.6s ease-out',
       },
       keyframes: {
         fadeIn: {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' },
         },
+        slideDown: {
+          '0%': { transform: 'translateY(-200%)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+        slideUp: {
+          '0%': { transform: 'translateY(0)', opacity: '1' },
+          '100%': { transform: 'translateY(-200%)', opacity: '0' },
+        },
+
       },
+      backgroundImage:{
+        "hero": "url('/hero-bg.svg')",
+      }
     },
   },
   plugins: [
