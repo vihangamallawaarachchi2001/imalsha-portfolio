@@ -1,0 +1,4 @@
+# Example .prettierignore file
+node_modules
+build
+dist
